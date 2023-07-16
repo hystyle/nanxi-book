@@ -39,4 +39,5 @@
   * [分布式基础](fen-bu-shi/fen-bu-shi-ji-chu.md)
   * [分布式事务](fen-bu-shi/fen-bu-shi-shi-wu.md)
   * [其它问题](fen-bu-shi/qi-ta-wen-ti.md)
-* [☺ 系统设计](xi-tong-she-ji.md)
+* [☺ 系统设计](xi-tong-she-ji/README.md)
+  * [😂 设计模式](xi-tong-she-ji/she-ji-mo-shi.md)
