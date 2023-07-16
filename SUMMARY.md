@@ -18,6 +18,7 @@
 * [😇 IO](io/README.md)
   * [基础](io/ji-chu.md)
 * [😀 MySQL](mysql/README.md)
+  * [数据库基础](mysql/shu-ju-ku-ji-chu.md)
   * [数据库事务](mysql/shu-ju-ku-shi-wu.md)
   * [索引](mysql/suo-yin.md)
   * [分库分表](mysql/fen-ku-fen-biao.md)
