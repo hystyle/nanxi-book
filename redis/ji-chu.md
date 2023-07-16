@@ -480,6 +480,8 @@ replicaof no one
 
 请注意，以上是主从复制的基本原理和步骤。在实际应用中，你可能还需要考虑监控和管理复制过程中的状态、配置适当的复制拓扑结构、处理复制延迟等方面的问题。
 
+参考：[https://doocs.gitee.io/advanced-java/#/docs/high-concurrency/redis-master-slave](https://doocs.gitee.io/advanced-java/#/docs/high-concurrency/redis-master-slave)
+
 ## 如果我在主节点设置了持久化，主节点崩了，那新的主节点会执行数据持久化吗？
 
 在Redis的主从复制中，从节点不会自动执行数据持久化。只有主节点才会执行数据持久化操作。
@@ -551,6 +553,10 @@ Redis还提供了一些可配置的淘汰策略，如`volatile-lru`、`volatile-
 你可以通过Redis的配置文件或者命令来设置淘汰策略。例如，使用`maxmemory-policy`配置项可以设置淘汰策略的名称，如`maxmemory-policy LRU`。
 
 需要注意的是，淘汰机制是为了释放内存空间，但也可能导致某些数据被淘汰，从而无法访问。因此，在选择淘汰策略时需要权衡存储空间和数据访问需求，并根据具体的业务场景进行配置。
+
+## 渐进式Rehash
+
+//TODO
 
 
 
