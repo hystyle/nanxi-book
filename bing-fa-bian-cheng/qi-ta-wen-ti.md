@@ -48,9 +48,7 @@ Exchanger用于线程间的数据交换，提供了一个同步点，两个线�
 
 需要注意的是，阻塞队列和非阻塞队列是针对队列的插入和获取操作而言的，具体的实现方式和特性可能因不同的队列实现而有所差异。在选择使用队列时，可以根据实际需求和性能要求来选择合适的队列实现。
 
-## ConcurrentMap的实现原理
-
-ConcurrentMap是Java中用于并发访问的Map接口的实现之一，它提供了线程安全的操作。在Java标准库中，ConcurrentMap的主要实现类是ConcurrentHashMap。
+## ConcurrentHashMap的实现原理
 
 ConcurrentHashMap的实现原理主要涉及以下几个方面：
 
