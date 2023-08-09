@@ -144,13 +144,17 @@ Java 中的接口和抽象类都是用来定义规范和约束的，但是它们
 | StringBuffer  | 可变的  | 线程安全  | 中  |
 | StringBuilder | 可变的  | 非线程安全 | 高  |
 
-希望这个表格能够更清晰地展示它们之间的区别。&#x20;
-
 ## String 为什么是不可变？
 
 Java 中的 String 类是不可变的，这是因为它是由 final 关键字修饰的。
 
-在 Java 中，final 关键字用来修饰类、方法和变量，表示它们是不可变的。当一个类被声明为 final 时，就不能被继承，也不能被修改；当一个方法被声明为 final 时，就不能被重写；当一个变量被声明为 final 时，就不能被修改。
+在 Java 中，final 关键字用来修饰类、方法和变量，表示它们是不可变的。
+
+当一个类被声明为 final 时，就不能被继承，也不能被修改；
+
+当一个方法被声明为 final 时，就不能被重写；
+
+当一个变量被声明为 final 时，就不能被修改。
 
 <pre class="language-java"><code class="lang-java">public final class String implements Serializable, Comparable&#x3C;String>, CharSequence {
     @Stable
@@ -164,8 +168,8 @@ Java 中的 String 类是不可变的，这是因为它是由 final 关键字修
 1. 是否保证线程安全： ArrayList 和 LinkedList 都是不同步的，也就是不保证线程安全；
 2. 底层数据结构： Arraylist 底层使⽤的是 Object 数组； LinkedList 底层使⽤的是双向链表数据结构。
 3. 插⼊和删除是否受元素位置的影响：&#x20;
-   * ArrayList 采⽤数组存储，所以插⼊和删除元素的时间复杂度受元素位置的影响。 ⽐如：执⾏ add(E e) ⽅法的时候， ArrayList 会默认在 将指定的元素追加到此列表的末尾，这种情况时间复杂度就是 O(1)。但是如果要在指定位置 i 插⼊和删除元素的话（ add(int index, E element) ）时间复杂度就为 O(n-i)。因为在进 ⾏上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执⾏向后位/向前移⼀位的 操作。&#x20;
-   * LinkedList 采⽤链表存储，所以对于 add(E e) ⽅法的插⼊，删除元素时间复杂 度不受元素位置的影响，近似 O(1)，如果是要在指定位置 i 插⼊和删除元素的话（ (add(int index, E element) ） 时间复杂度近似为 o(n)) 因为需要先移动到指定位置再插⼊。
+   * ArrayList 采⽤数组存储，所以插⼊和删除元素的时间复杂度受元素位置的影响。 ⽐如：执⾏ add(E e) ⽅法的时候， ArrayList 会默认将指定的元素追加到此列表的末尾，这种情况时间复杂度就是 O(1)。但是如果要在指定位置 i 插⼊和删除元素的话（ add(int index, E element) ）时间复杂度就为 O(n-i)。因为在进⾏上述操作的时候集合中第 i 和第 i 个元素之后的(n-i)个元素都要执⾏向后位/向前移⼀位的操作。&#x20;
+   * LinkedList 采⽤链表存储，所以对于 add(E e) ⽅法的插⼊，删除元素时间复杂度不受元素位置的影响，近似 O(1)，如果是要在指定位置 i 插⼊和删除元素的话（ (add(int index, E element) ） 时间复杂度近似为 o(n) 因为需要先移动到指定位置再插⼊。
 4. 是否⽀持快速随机访问： LinkedList 不⽀持⾼效的随机元素访问，⽽ ArrayList ⽀持。 快速随机访问就是通过元素的序号快速获取元素对象(对应于 get(int index) ⽅法)。
 5. 内存空间占⽤： ArrayList 的空间浪费主要体现在在 list 列表的结尾会预留⼀定的容量空间，⽽ LinkedList 的空间花费则体现在它的每⼀个元素都需要消耗⽐ ArrayList 更多的空间 （因为要存放直接后继和直接前驱以及数据）。
 
