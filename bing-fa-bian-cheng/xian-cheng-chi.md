@@ -8,6 +8,18 @@ description: 从Java线程池的实现原理开始吧！
 
 美团的这篇文章对Java线程池的介绍非常全面《[Java线程池实现原理及其在美团业务中的实践](https://tech.meituan.com/2020/04/02/java-pooling-pratice-in-meituan.html)》
 
+## ThreadPoolExecutor的主要设置参数有哪些?
+
+ThreadPoolExecutor的主要设置参数有以下几个：
+
+1. corePoolSize:核心线程数，即使这些线程处于空闲状态，它们也不会被销毁，除非设置了allowCoreThreadTimeOut。当线程数小于corePoolSize时，即使有线程空闲，线程池也会优先创建新线程处理。
+2. maximumPoolSize:最大线程数。当线程数 >= corePoolSize,且任务队列已满时，线程池会创建新线程来处理任务。当线程数 = maxPoolSize,且任务队列已满时，线程池会拒绝处理任务而抛出异常。
+3. keepAliveTime:空闲线程的存活时间。当空闲线程的存活时间大于0时，如果当前线程池中的线程数量超过corePoolSize,且空闲时间超过keepAliveTime时，则会回收空闲线程。
+4. unit:keepAliveTime的时间单位。
+5. workQueue:任务队列。它是一个阻塞队列，用于存储等待执行的任务。
+6. threadFactory:用于创建新线程的工厂类。
+7. handler:拒绝策略。当任务无法提交给线程池时，handler会处理该任务。
+
 ## 线程池参数设计会根据什么因素考量
 
 线程池参数设计通常会考虑以下几个因素：
