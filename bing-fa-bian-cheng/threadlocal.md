@@ -1,8 +1,17 @@
 ---
-description: 从threadLocal的实现原理开始吧！
+description: 从threadLocal的使用场景开始吧！
 ---
 
 # ThreadLocal
+
+## ThreadLocal的使用场景
+
+ThreadLocal是Java中的一个类，它的作用是为每个线程提供一个独立的变量副本，解决了变量并发访问的冲突问题。ThreadLocal常用于以下场景：
+
+1. 在进行对象跨层传递的时候，使用ThreadLocal可以避免多次传递，打破层次间的约束。
+2. 线程间数据隔离。
+3. 进行事务操作，用于存储线程事务信息。
+4. 数据库连接，Session会话管理。
 
 ## ThreadLocal的实现原理
 
