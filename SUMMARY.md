@@ -35,6 +35,7 @@
   * [Kafka](chang-yong-kuang-jia/kafka.md)
   * [Eureka](chang-yong-kuang-jia/eureka.md)
 * [😂 中间件](zhong-jian-jian/README.md)
+  * [ES](zhong-jian-jian/es.md)
   * [消息队列](zhong-jian-jian/xiao-xi-dui-lie.md)
 * [😎 分布式](fen-bu-shi/README.md)
   * [分布式基础](fen-bu-shi/fen-bu-shi-ji-chu.md)
